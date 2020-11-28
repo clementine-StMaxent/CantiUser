@@ -1,0 +1,37 @@
+<div class="block_input">
+
+    <div >
+        <input (keyup)="filter($event)" type="text" placeholder="Recherche Utilisateur" id="filter">
+    </div>
+</div>
+
+<!-- Ici nous aurons le tableau avecles utilisateurs en fonction de leur nom, préno
+ainsi que le wallet sur chacun des utlisateurs
+-->
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Wallet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of filterUsers , let i=index">
+            <th scope="row"></th>
+            <!-- Nous utilison les {{}} pour récupérer les données de l'interface
+                et du UserComponent
+            -->
+            <td>{{user.name}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.wallet}}</td>
+            <div class="block_btn">
+                <input class="wallet" type="number" #amount>
+                <button (click)="ModifWallet(user, 'credit', amount.value,i)" class="btn btn-primary">Crédit</button>
+                <button (click)="ModifWallet(user, 'debit', amount.value,i)" class="btn btn-danger">Débit</button>
+            </div>
+        </tr>
+    </tbody>
+</table>

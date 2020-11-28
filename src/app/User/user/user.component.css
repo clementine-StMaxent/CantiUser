@@ -1,0 +1,30 @@
+.table{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.wallet{
+    width: 50%;
+}
+
+.block_btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    margin-left: 2%;
+}
+
+.block_input{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.input{
+    text-align: left;
+}
+
+#filter{
+    width:150px;
+    margin-bottom:10px;
+}
